@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Microsoft YaHei', 'Arial', sans-serif;
+  background: #f4f8fb;
+  color: #222;
+  font-size: 20px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a3d62;
+  color: #fff;
+  padding: 20px 8vw;
+  font-size: 1.3em;
+}
+.logo {
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #4fc3f7;
+}
+.banner {
+  background: url('assets/banner.jpg') center/cover no-repeat;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 8vw;
+  color: #fff;
+  position: relative;
+}
+.banner::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(10,61,98,0.45);
+  z-index: 1;
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+.banner h1 {
+  font-size: 3.5em;
+  margin: 0 0 0.2em 0;
+  font-weight: bold;
+}
+.banner h2 {
+  font-size: 2em;
+  margin: 0 0 0.5em 0;
+}
+.banner p {
+  font-size: 1.3em;
+}
+.section {
+  padding: 60px 8vw 40px 8vw;
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+.section h2 {
+  font-size: 2.2em;
+  color: #0a3d62;
+  margin-bottom: 0.8em;
+}
+.products .product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-between;
+}
+.card {
+  background: #e3f2fd;
+  border-radius: 16px;
+  padding: 2em 1.5em;
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 320px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 1em;
+}
+.card h3 {
+  color: #1976d2;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+.partners .partner-logos {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.partner-logos img {
+  height: 60px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  padding: 10px;
+}
+footer {
+  text-align: center;
+  padding: 30px 0 20px 0;
+  color: #888;
+  font-size: 1.1em;
+  background: #f4f8fb;
+}
+@media (max-width: 900px) {
+  .products .product-cards { flex-direction: column; }
+  .navbar { flex-direction: column; gap: 1em; }
+  .banner { padding-left: 2vw; }
+  .section { padding: 40px 2vw 30px 2vw; }
+} 
